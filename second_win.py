@@ -69,6 +69,11 @@ class TestWin(QWidget):
 
    def timer3Event:
        if int(time.toString('hh:mm:ss')[6:8]) >= 45:
+           self.text_timer.setStyleSheet('color: rgb(0, 255, 0)')
+       elif int(time.toString('hh:mm:ss')[6:8]) <= 15: 
+           self.text_timer.setStyleSheet('color: rgb(0, 255, 0)')
+       else:
+           self.text_timer.setStyleSheet('color: rgb(0, 0, 0)')          
 
    def connects(self):
        self.btn_next.clicked.connect(self.next_click)
